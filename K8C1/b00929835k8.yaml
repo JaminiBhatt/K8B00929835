@@ -63,7 +63,7 @@ spec:
     spec:
       containers:
         - name: b00929835c1
-          image: northamerica-northeast1-docker.pkg.dev/k8b00929835/container1/conatiner1-image:latest
+          image: us-central1-docker.pkg.dev/k8b00929835/container1/conatiner1-image:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 6000
@@ -93,7 +93,7 @@ spec:
     spec:
       containers:
         - name: b00929835c2
-          image: northamerica-northeast1-docker.pkg.dev/k8b00929835/conatainer2/conatiner2-image:latest
+          image: us-central1-docker.pkg.dev/k8b00929835/conatainer2/conatiner2-image:latest
           imagePullPolicy: Always
           ports:
             - containerPort: 8000
