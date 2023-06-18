@@ -4,7 +4,7 @@ FROM openjdk:20-jdk-slim
 WORKDIR /app
 
 
-COPY target/K8C2-0.0.1-SNAPSHOT .
+COPY K8C2-0.0.1-SNAPSHOT .
 
 
 EXPOSE 8080
