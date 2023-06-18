@@ -1,0 +1,17 @@
+steps:
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['build', '-t', 'northamerica-northeast1-docker.pkg.dev/k8b00929835/conatainer2/container1-image:latest', '.']
+
+  - name: 'gcr.io/cloud-builders/docker'
+    args: ['push', 'northamerica-northeast1-docker.pkg.dev/k8b00929835/conatainer2/container2-image:latest']
+
+  - name: 'gcr.io/cloud-builders/kubectl'
+    args: ['apply', '-f', 'b00929835k8.yaml']
+    env:
+      - 'CLOUDSDK_COMPUTE_REGION=northamerica-northeast1-a'
+      - 'CLOUDSDK_CONTAINER_CLUSTER=b00929835k8cluster'
+      - 'CLOUDSDK_CORE_PROJECT=k8b00929835'
+
+options:
+  logging: CLOUD_LOGGING_ONLY

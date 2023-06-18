@@ -1,0 +1,10 @@
+
+FROM openjdk:20-jdk-slim
+
+WORKDIR /app
+
+COPY target/K8C1-0.0.1-SNAPSHOT.jar .
+
+EXPOSE 8080
+
+CMD ["java", "-jar", "K8C1-0.0.1-SNAPSHOT.jar", "--server.port=8080"]
